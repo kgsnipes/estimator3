@@ -1,0 +1,183 @@
+{
+  "currencyCode": "USD",
+  "taskClassification": [
+    "Conform",
+    "Custom",
+    "Compromise",
+    "Connect",
+    "Configure"
+  ],
+  "phases": [
+    {
+      "name": "Discovery",
+      "duration": 4,
+      "units": "WEEKS"
+    },
+    {
+      "name": "Build",
+      "duration": 12,
+      "units": "WEEKS"
+    },
+    {
+      "name": "SIT",
+      "duration": 3,
+      "units": "WEEKS"
+    },
+    {
+      "name": "UAT",
+      "duration": 3,
+      "units": "WEEKS"
+    },
+    {
+      "name": "GoLIVE",
+      "duration": 1,
+      "units": "WEEKS"
+    },
+    {
+      "name": "Warranty",
+      "duration": 2,
+      "units": "WEEKS"
+    }
+  ],
+  "estimationDetails": [
+    {
+      "name": "Epic",
+      "values": "Storefront,Backoffice,Integration",
+      "type": "string",
+      "length": 100
+    },
+    {
+      "name": "Sub Functionality",
+      "values": "Cart,My Account",
+      "type": "string",
+      "length": 100
+    },
+    {
+      "name": "Functional Description",
+      "type": "string",
+      "length": 1000
+    },
+    {
+      "name": "BED Assumptions",
+      "type": "string",
+      "length": 100
+    },
+    {
+      "name": "FED Assumptions",
+      "type": "string",
+      "length": 100
+    }
+  ],
+  "estimationAspects": [{ "name": "BED" }, { "name": "FED" }],
+  "taskComplexity": [
+    {
+      "name": "Mini",
+      "manHours": 8,
+      "aspect": "BED"
+    },
+    {
+      "name": "Small",
+      "manHours": 16,
+      "aspect": "BED"
+    },
+    {
+      "name": "Medium",
+      "manHours": 40,
+      "aspect": "BED"
+    },
+    {
+      "name": "Large",
+      "manHours": 60,
+      "aspect": "BED"
+    },
+    {
+      "name": "X-Large",
+      "manHours": 80,
+      "aspect": "BED"
+    },
+    {
+      "name": "Mini",
+      "manHours": 8,
+      "aspect": "FED"
+    },
+    {
+      "name": "Small",
+      "manHours": 16,
+      "aspect": "FED"
+    },
+    {
+      "name": "Medium",
+      "manHours": 40,
+      "aspect": "FED"
+    },
+    {
+      "name": "Large",
+      "manHours": 60,
+      "aspect": "FED"
+    },
+    {
+      "name": "X-Large",
+      "manHours": 80,
+      "aspect": "FED"
+    }
+  ],
+
+  "resourceTypes": [
+    {
+      "region": "US",
+      "description": "BED - Tech Lead",
+      "ratePerHour": "150",
+      "manHoursPerWeek": "40"
+    },
+    {
+      "region": "US",
+      "description": "BED - Sr DEV",
+      "ratePerHour": "150",
+      "manHoursPerWeek": "40"
+    },
+    {
+      "region": "US",
+      "description": "BED - DEV",
+      "ratePerHour": "150",
+      "manHoursPerWeek": "40"
+    },
+    {
+      "region": "US",
+      "description": "FED",
+      "ratePerHour": "150",
+      "manHoursPerWeek": "40"
+    }
+  ],
+  "costAdditionDeductions": [
+    {
+      "name": "Margin",
+      "phase": "Build",
+      "percentage": true,
+      "value": 45,
+      "deduction": false
+    },
+    {
+      "name": "Customer discount",
+      "phase": "Overall",
+      "percentage": true,
+      "value": 10,
+      "deduction": true
+    }
+  ],
+  "calculationRules": [
+    {
+      "name": "QA",
+      "phase": "Build",
+      "aspect": "QA"
+    }
+  ],
+  "fixedEstimations": [
+    {
+      "phase": "Discovery",
+      "region": "US",
+      "resource": "BED - Tech Lead",
+      "duration": 4,
+      "units": "WEEKS"
+    }
+  ]
+}
