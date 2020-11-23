@@ -11,7 +11,7 @@ export default class EstimatorApplication {
   init(template) {
     this.loader(true);
     if (template && template.currencyCode) {
-      this.estimatorContext = template;
+      this.estimator = new Estimator(template);
       this.loadSettingsFromTemplate(this.estimator.getEstimator());
     }
 
